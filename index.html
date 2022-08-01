@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Cafe</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <style>
+    @media(max-width: 500px) {
+      .reverse-columns {
+        flex-direction: column-reverse;
+        display: flex;
+      }
+    }
+
+    .titled {
+      font-family: 'Merriweather', serif !important;
+      font-size: 58px !important;
+      font-weight: 400 !important;
+      line-height: 64px !important;
+    }
+
+    .subtitled {
+      font-family: 'Merriweather', serif !important;
+      font-size: 22px !important;
+      font-weight: 400 !important;
+      line-height: 36px !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NavBar va a todo lo ancho -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <img src="images/title.jpg" width="500" height="200">
+
+    </div>
+
+    <div class="navbar-menu">
+
+      <div class="navbar-end">
+        <a class="navbar-item" onclick="changeBackground('city');changePlaylist('city')">
+          City
+        </a>
+
+        <a class="navbar-item" onclick="changeBackground('beach');changePlaylist('beach')">
+          Beach
+        </a>
+
+        <a class="navbar-item" onclick="changeBackground('forest');changePlaylist('forest')">
+          Forest
+        </a>
+
+        <a class="navbar-item" onclick="changeBackground('cafe');changePlaylist('cafe')">
+          Cafe
+        </a>
+        
+        <a class="navbar-item" onclick="changeBackground('library');changePlaylist('library')">
+          Library
+        </a>
+        
+        <a href="test.html" class="navbar-item">
+          TEST
+        </a>
+
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero is-medium has-text-centered">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+          <div data-aos="zoom-in-up" class="column is-8">
+            <h1 class="subtitle subtitled is-1 mb-6 is-small">
+              <span id="typewriter"></span>
+            </h1>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/2.13.1/core.min.js"></script>
+  <script>
+    new Typewriter('#typewriter', {
+      strings: ['Welcome ...'],
+      autoStart: true,
+      loop: true,
+    });
+  </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true
+    });
+  </script>
+  <iframe id="spotifyPlaylist" style="border-radius:12px" src="https://open.spotify.com/embed-legacy/playlist/2EUaq48Csc6zyqj1SIKM5r?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+</body>
+</html>
+
+<!-- <iframe id="spotifyPlaylist" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2EUaq48Csc6zyqj1SIKM5r" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+ -->
